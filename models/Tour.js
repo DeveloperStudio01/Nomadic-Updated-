@@ -1,19 +1,5 @@
 import mongoose from "mongoose";
 
-const itinerarySchema = new mongoose.Schema({
-  day: {
-      type: Number,
-      required: true
-  },
-  dayTitle: {
-      type: String,
-      required: true
-  },
-  desp:{
-    type:String,
-    required:true
-  }
-});
 
 const tourSchema = new mongoose.Schema(
   {
@@ -41,7 +27,6 @@ const tourSchema = new mongoose.Schema(
       type:Number,
       required:true,
     },
-    itinerary: [itinerarySchema],
     /*bestTimeToVisit: {
       type: String,
       required: true,
