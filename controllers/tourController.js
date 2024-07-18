@@ -10,7 +10,6 @@ export const createTour=async(req,res)=>{
     catch(err)
     {
         res.status(500).json({success:false,message:'Failed to Create,Try Again'})
-        console.log(err)
     }
 }
 
@@ -33,7 +32,6 @@ export const updateTour=async(req,res)=>{
             success:false,
             message:"Cant update, try it again"
         })
-        console.log(err)
     }
 }
 
