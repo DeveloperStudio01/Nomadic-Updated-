@@ -1,5 +1,20 @@
 import mongoose from "mongoose";
 
+const itinerarySchema = new mongoose.Schema({
+  day: {
+      type: Number,
+      required: true
+  },
+  dayTitle: {
+      type: String,
+      required: true
+  },
+  desp:{
+    type:String,
+    required:true
+  }
+});
+
 const tourSchema = new mongoose.Schema(
   {
     title: {
@@ -26,18 +41,23 @@ const tourSchema = new mongoose.Schema(
       type:Number,
       required:true,
     },
+    itinerary: [itinerarySchema],
     /*bestTimeToVisit: {
       type: String,
       required: true,
-    },
-    itinerary: {
+    },*/
+    downloadItinerary: {
       type: String,
       required: true,
     },
-    inclusionsAndExclusion:{
+    inclusions:{
       type:String,
       required:true,
-    }*/
+    },
+    exclusions:{
+      type:String,
+      required:true,
+    }
   },
   { timestamps: true }
 );
